@@ -1,4 +1,4 @@
-# app/mediahelpers.py — media shortcut parsing and optional explicit artifact fetch
+# app/mediaHelpers.py — media shortcut parsing and optional explicit artifact fetch
 
 from typing import Any, Dict, List, Optional, Tuple
 import httpx

@@ -1,4 +1,4 @@
-# app/pythonhowtobuildzoombot.py
+# app/pythonHowToBuildABot.py
 
 import os, json, base64
 from collections import defaultdict
