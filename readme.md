@@ -403,4 +403,4 @@ Start a bot (replace placeholders) and watch your server logs for `[/wh]` and `[
 
 ## License
 
-MIT (or your preferred license). Update this section before open‑sourcing.
+MIT 
