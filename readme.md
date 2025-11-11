@@ -1,6 +1,11 @@
-# meeting-bot
+# meeting-bot (meeting bot to get video, audio, diarized transcripts and more from meetings)
 
 Minimal FastAPI server that creates a Recall.ai meeting bot, streams realtime data (webhook + optional websocket), and retrieves artifacts for downstream analysis.
+
+If you're interested in the process, reasoning, demos, and more, [check out the blog](https://www.recall.ai/blog/how-to-build-a-meeting-bot).
+
+## Hosted Meeting Recording API
+If you don't want to host a bot yourself or want another form factor, check out [Recall.ai](https://www.recall.ai/?utm_source=github&utm_medium=sampleapp&utm_campaign=meeting-bot-recallai)
 
 ## What you can do
 
