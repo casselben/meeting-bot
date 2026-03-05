@@ -1,5 +1,8 @@
 # server.py
-from app.pythonhowtobuildzoombot import app  # this imports your FastAPI app instance
+from dotenv import load_dotenv
+load_dotenv()
+
+from app.pythonHowToBuildABot import app
 from app.analyze import router as analysis_router
 
 # Mount additional routes under /api

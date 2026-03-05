@@ -243,6 +243,16 @@ async def start(payload: dict):
     bot_id = bot.get("id") or bot.get("bot_id") or bot.get("uuid") or (bot.get("data") or {}).get("id")
     return {"bot_id": bot_id, "webhook": f"{NGROK_BASE}/wh", "websocket": ws_url or None, "video": realtime_video or "none"}
 
+# List recent bots
+@app.get("/bots")
+async def list_bots():
+    assert http is not None, "HTTP client not initialized"
+    r = await http.get(f"{API}/bot", headers=H, params={"ordering": "-created_at", "limit": 10})
+    r.raise_for_status()
+    data = r.json()
+    bots = data.get("results", []) if isinstance(data, dict) else data
+    return [{"bot_id": b.get("id"), "status": (b.get("status") or {}).get("code"), "meeting_url": b.get("meeting_url"), "bot_name": b.get("bot_name")} for b in bots]
+
 # Retrieve artifacts
 @app.get("/retrieve/{bot_id}")
 async def retrieve(bot_id: str):
